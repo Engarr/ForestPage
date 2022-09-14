@@ -17,83 +17,26 @@
 		<link rel="stylesheet" href="dist/css/style.min.css" />
 	</head>
 	<body>
-		<div class="navbar">
-	<div class="container">
-		<div class="navbar__nav">
-			<div class="navbar__logo">
-				<a href="#">
-					<i class="fa-solid fa-tree"></i>
-					<p>Forest</p>
-				</a>
-			</div>
-			<button class="burger-btn">
-				<div class="burger-btn__box">
-					<div class="burger-btn__bars"></div>
-				</div>
-			</button>
-
-			<ul class="navbar__list">
-				<li class="navbar__item "><a href="#">Home</a></li>
-				<li class="navbar__item "><a href="#about-us">O nas</a></li>
-				<li class="navbar__item"><a href="#offert">Oferta</a></li>
-				<li class="navbar__item"><a href="#contact">Kontakt</a></li>
-			</ul>
-		</div>
-	</div>
+		
+<div class="navbar">
+    <div class="container">
+        <div class="nav2_logo">
+            <div class="navbar__logo">
+                <a href="index.html">
+                    <i class="fa-solid fa-tree"></i>
+                    <p>Forest</p>
+                </a>
+            </div>
+        </div>	
+    </div>
 </div>
 
-
-		<header id="#" class="home">
-			<div class="hero__image">
-				<div class="hero__image-shadow">
-					<div class="hero__image-text">
-						<p>Forest Group</p>
-						<h1>Najpięknieszy park w Twojej okolicy!</h1>
-					</div>
-				</div>
-			</div>
-		</header>
 		<main>
-			<section class="about-us section" id="about-us">
-				<div class="container">
-					<h2 class="about-us__title">O nas</h2>
-					<div class="about-us__box">
-						<div class="about-us__image"></div>
-						<div class="about-us__text">
-							<div class="about-us__text--box">
-								<h3>Niezapomniane przygody</h3>
-
-								<p>
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-									Doloremque ad, recusandae maxime, possimus optio, eveniet
-									placeat fugit dicta deserunt consectetur accusantium est sequi
-									eaque ducimus aut accusamus architecto inventore. Ullam! Lorem
-									ipsum dolor sit amet consectetur adipisicing elit. Ad
-									temporibus, Lorem ipsum dolor sit amet consectetur adipisicing
-									elit. Asperiores quibusdam, maxime dicta alias atque
-									distinctio illo unde nostrum pariatur eos esse facere, ipsa
-									corrupti officiis aperiam vel dolor. Aut, vitae?
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="about-us-image2">
-					<div class="hero__image-shadow">
-						<div class="frame">
-							<div class="frame__text">
-								<p>Przygoda dla całej rodziny</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="offert section" id="offert">
+			<section class="offert section" id="offert_page">
 				<div class="offert">
 					<div class="offert__text">
-						<h2 class="offert__text-title">Oferta</h2>
-						<p>Wybierz jedną z naszych wspaniałych ofert!</p>
+						<h2 class="offert__text-title">Dostępne oferty</h2>
+						<p>Zapoznaj się z całą listą naszych ofert</p>
 					</div>
 					<div class="offert__cards">
 						<div class="offert__card">
@@ -112,8 +55,27 @@
 									<i class="fa-solid fa-minus"></i> Opcja poza pakietem
 								</p>
 							</div>
-							<button class="offert__card-buttom">Wybierz</button>
+							<div class="offert__card-button--box">
+								<button class="offert__card-buttom">Wybierz</button>
+							</div>
 						</div>
+
+						<div class="offert__card">
+							<p class="offert__card-title">Twoja</p>
+							<p class="offert__card-price"><span>$</span> 149</p>
+
+							<div class="offert__card-list">
+								<p><i class="fa-solid fa-check"></i> Wybierz 3 opcje</p>
+								<p class="not-available">
+									<i class="fa-solid fa-minus"></i> Odrzuć 3 opcje
+								</p>
+							</div>
+
+							<div class="offert__card-button--box">
+								<button class="offert__card-buttom">Wybierz</button>
+							</div>
+						</div>
+
 						<div class="offert__card">
 							<p class="offert__card-title">Standard</p>
 							<p class="offert__card-price"><span>$</span> 99</p>
@@ -128,9 +90,11 @@
 									<i class="fa-solid fa-minus"></i> Opcja poza pakietem
 								</p>
 							</div>
-							<button class="offert__card-buttom standard__butom">
-								Wybierz
-							</button>
+							<div class="offert__card-button--box">
+								<button class="offert__card-buttom standard__butom">
+									Wybierz
+								</button>
+							</div>
 						</div>
 						<div class="offert__card">
 							<p class="offert__card-title">Premium</p>
@@ -142,12 +106,49 @@
 								<p><i class="fa-solid fa-check"></i> Opcja w pakiecie</p>
 								<p><i class="fa-solid fa-check"></i> Opcja w pakiecie</p>
 							</div>
-							<button class="offert__card-buttom">Wybierz</button>
+							<div class="offert__card-button--box">
+								<button class="offert__card-buttom">Wybierz</button>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="offert__more">
-					<button class="offert__card-buttom"><a href="offerts.html">Przejżyj wszystkie nasze oferty</a></button>
+					<div class="offert__cards">
+						<div class="offert__card">
+							<p class="offert__card-title">Razem taniej-Standard</p>
+							<p><small>Pakiet dla dwóch osób</small></p>
+							<p class="offert__card-price"><span>$</span> 149</p>
+							<div class="offert__card-list">
+								<p><i class="fa-solid fa-check"></i> Opcja w pakiecie</p>
+								<p><i class="fa-solid fa-check"></i> Opcja w pakiecie</p>
+								<p><i class="fa-solid fa-check"></i> Opcja w pakiecie</p>
+								<p class="not-available">
+									<i class="fa-solid fa-minus"></i> Opcja poza pakietem
+								</p>
+								<p class="not-available">
+									<i class="fa-solid fa-minus"></i> Opcja poza pakietem
+								</p>
+							</div>
+							<div class="offert__card-button--box">
+								<button class="offert__card-buttom standard__butom">
+									Wybierz
+								</button>
+							</div>
+						</div>
+						<div class="offert__card">
+							<p class="offert__card-title">Razem taniej-Premium</p>
+							<p><small>Pakiet dla dwóch osób</small></p>
+							<p class="offert__card-price"><span>$</span> 399</p>
+							<div class="offert__card-list">
+								<p><i class="fa-solid fa-check"></i> Opcja w pakiecie</p>
+								<p><i class="fa-solid fa-check"></i> Opcja w pakiecie</p>
+								<p><i class="fa-solid fa-check"></i> Opcja w pakiecie</p>
+								<p><i class="fa-solid fa-check"></i> Opcja w pakiecie</p>
+								<p><i class="fa-solid fa-check"></i> Opcja w pakiecie</p>
+							</div>
+							<div class="offert__card-button--box">
+								<button class="offert__card-buttom">Wybierz</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>

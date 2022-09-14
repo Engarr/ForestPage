@@ -78,7 +78,11 @@ body {
 		}
 	}
 }
-
+.nav2_logo{
+	
+	margin-top: 1.5em;
+	
+}
 .navbar {
 	position: fixed;
 	top: 0;
@@ -94,12 +98,16 @@ body {
 		height: 80px;
 	}
 	&__logo {
-		display: flex;
 		a {
+			display: flex;
+			flex-direction: row;
 			margin: 1rem;
 			color: $black-color;
 			font-size: 1.6em;
 			text-decoration: none;
+			i{
+				margin-right: .5rem;
+			}
 		}
 	}
 	&__list {
@@ -333,6 +341,7 @@ body {
 
 .offert {
 	margin-bottom: 3em;
+	margin-top: 80px;
 
 	&__text {
 		width: 100%;
@@ -348,6 +357,7 @@ body {
 			margin-bottom: 2rem;
 			text-transform: uppercase;
 			font-weight: 400;
+			word-wrap: break-word;
 			font-size: 2.5em;
 		}
 		p {
@@ -369,11 +379,20 @@ body {
 		box-shadow: 0 0 5px rgb(73, 72, 72);
 		border-radius: 10px;
 		height: 400px;
+		max-height: 400px;
 		width: 300px;
+		&-button--box{
+			display: flex;
+			justify-content: center;
+			align-items:flex-end;
+			margin-bottom: 4.5em;
+			height: 100%;
+		}
 		&-title {
 			margin-top: 1.5em;
 			margin-bottom: 0.5em;
-			font-size: 2.5rem;
+			font-weight: 800;
+			font-size: 2rem;
 		}
 		&-price {
 			font-size: 2.5rem;
@@ -396,6 +415,15 @@ body {
 		}
 		&-buttom:hover {
 			background-color: $buttom-background-hover;
+		}
+	}
+	&__more{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		a{
+			text-decoration: none;
+			color: black;
 		}
 	}
 }
@@ -480,8 +508,13 @@ body {
 	}
 
 	.offert {
+		&__text-title{
+			font-size: 2.3em;
+			
+		}
 		&__cards {
 			display: flex;
+			
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
@@ -498,7 +531,21 @@ body {
 			font-size: 2.1rem;
 		}
 	}
+	.offert {
+		&__text{
+			
+			p{
+				font-size: 1.2em;
+			}
+		}
+		&__cards {
+			flex-direction: column;
+		}
+		
+	}
+
 }
+
 ////////////////////////////////////////////////
 @media (min-width: 996px) {
 	.burger-btn {
@@ -557,5 +604,11 @@ body {
 
 	.about-us-image2 {
 		background-image: url(../img/girl-5785590_1920_big.jpg);
+	}
+	.offert {
+		&__cards {
+			flex-direction: row;
+		}
+		
 	}
 }

@@ -78,10 +78,8 @@ body {
 		}
 	}
 }
-.nav2_logo{
-	
+.nav2_logo {
 	margin-top: 1.5em;
-	
 }
 .navbar {
 	position: fixed;
@@ -105,8 +103,8 @@ body {
 			color: $black-color;
 			font-size: 1.6em;
 			text-decoration: none;
-			i{
-				margin-right: .5rem;
+			i {
+				margin-right: 0.5rem;
 			}
 		}
 	}
@@ -160,7 +158,6 @@ body {
 	background-image: url(../img/jungle-1807476_640.jpg);
 	height: 400px;
 	width: 100%;
-	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 	&-shadow {
@@ -349,10 +346,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		p {
-			padding-left: 1em;
-			padding-right: 1em;
-		}
+
 		&-title {
 			margin-bottom: 2rem;
 			text-transform: uppercase;
@@ -361,6 +355,7 @@ body {
 			font-size: 2.5em;
 		}
 		p {
+			padding: 0 1em;
 			margin-bottom: 2em;
 		}
 	}
@@ -381,12 +376,15 @@ body {
 		height: 400px;
 		max-height: 400px;
 		width: 300px;
-		&-button--box{
+		&-button--box {
 			display: flex;
 			justify-content: center;
-			align-items:flex-end;
+			align-items: flex-end;
 			margin-bottom: 4.5em;
 			height: 100%;
+		}
+		&-button {
+			margin-top: 2em;
 		}
 		&-title {
 			margin-top: 1.5em;
@@ -404,40 +402,171 @@ body {
 		&-list {
 			line-height: 1.7em;
 		}
-		&-buttom {
-			margin-top: 2em;
-			padding: 10px 50px;
-			cursor: pointer;
-			border-radius: 5px;
-			border: none;
-			box-shadow: 0 2px 5px rgb(73, 72, 72);
-			transition: background-color 0.3s;
-		}
-		&-buttom:hover {
-			background-color: $buttom-background-hover;
+		&-button:hover {
+			background-color: $button-background-hover;
 		}
 	}
-	&__more{
+	&__more {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		a{
+
+		a {
+			font-size: 1.6rem;
+			border-radius: 5px;
+			padding: 10px 20px;
 			text-decoration: none;
 			color: black;
+			background-color: $button-background;
+			box-shadow: 0 2px 5px $box-shadow;
+			transition: background-color 0.3s;
+		}
+		a:hover {
+			background-color: $button-background-hover;
 		}
 	}
 }
-.standard__butom {
+.standard__button {
+	border-radius: 5px;
+	border: none;
 	background-color: rgb(47, 255, 134);
+	box-shadow: 0 2px 5px $box-shadow;
+	transition: background-color 0.3s;
+	cursor: pointer;
+	padding: 10px 50px;
 }
-.standard__butom:hover {
-	background-color: $standard-buttom-hover;
+.standard__button:hover {
+	background-color: $standard-button-hover;
 }
 .fa-check {
 	color: green;
 }
 .not-available {
 	color: gray;
+}
+
+///////////////////////////////////////
+// Contact Page
+///////////////////////////////////////
+
+.contact {
+	&__title {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		h1 {
+			margin: 1em 0;
+			text-transform: uppercase;
+		}
+		p {
+			margin: 0 1em;
+		}
+	}
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 81px;
+		padding: 2em 0em;
+		height: 100%;
+
+		&-box {
+			width: 100%;
+			border-radius: 10px;
+			box-shadow: 0 0 10px $box-shadow;
+			margin: 0 1em;
+		}
+	}
+	&__form {
+		&-box {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			label {
+				width: 50%;
+				margin: 1em;
+			}
+			input {
+				width: 50%;
+			}
+		}
+		&-textarea {
+			max-width: 60%;
+			min-width: 50%;
+			min-height: 150px;
+		}
+	}
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 2em 0em;
+	}
+	&__error {
+		opacity: 0;
+		margin-top: 1em;
+		color: rgb(10, 102, 223);
+	}
+	&__area-style {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.6rem;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px $box-shadow;
+	}
+}
+
+.popup {
+	position: absolute;
+	top: 50%;
+	left: -300%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	height: 40%;
+	border-radius: 10px;
+	background-color: $white-color;
+	box-shadow: 0 0 10px $box-shadow;
+
+	&__container {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 10;
+	}
+	&__title {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		h2 {
+			margin-bottom: 0.5em;
+		}
+	}
+	&__button {
+		margin-top: 2.5em;
+	}
+}
+.active-popup {
+	left: 50%;
+}
+.show-error {
+	opacity: 1;
+}
+
+.buttons {
+	border-radius: 5px;
+	border: none;
+	background-color: $button-background;
+	box-shadow: 0 2px 5px $box-shadow;
+	transition: background-color 0.3s;
+	cursor: pointer;
+	padding: 10px 50px;
 }
 
 ///////////////////////////////////////
@@ -508,19 +637,46 @@ body {
 	}
 
 	.offert {
-		&__text-title{
-			font-size: 2.3em;
-			
+		&__text {
+			&-title {
+				font-size: 2.3em;
+			}
 		}
 		&__cards {
 			display: flex;
-			
+
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 		}
 		&__card {
 			width: 250px;
+		}
+		&__more {
+			a {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	.popup {
+		&__title {
+			font-size: 1rem;
+			p {
+				width: 80%;
+			}
+		}
+	}
+	.contact {
+		&__form {
+			&-box {
+				input {
+					width: 80%;
+				}
+			}
+			&-textarea {
+				max-width: 80%;
+				min-width: 80%;
+			}
 		}
 	}
 }
@@ -532,18 +688,15 @@ body {
 		}
 	}
 	.offert {
-		&__text{
-			
-			p{
+		&__text {
+			p {
 				font-size: 1.2em;
 			}
 		}
 		&__cards {
 			flex-direction: column;
 		}
-		
 	}
-
 }
 
 ////////////////////////////////////////////////
@@ -609,6 +762,5 @@ body {
 		&__cards {
 			flex-direction: row;
 		}
-		
 	}
 }

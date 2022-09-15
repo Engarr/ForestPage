@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Forest Group - najpiękniejszy park w Twojej okolicy</title>
+		<script
+			src="https://kit.fontawesome.com/fe5dae04ab.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="dist/css/style.min.css" />
+	</head>
+	<body>
+		<!-- @include "_subpage-nav.kit" -->
+
+		<main>
+			<form>
+				<div class="contact__container">
+					<div class="contact__container-box">
+						<div class="contact__title">
+							<h1>Masz pytania?</h1>
+							<p>Zapraszamy do kontaktu!</p>
+						</div>
+						<div class="contact__form-box">
+							<label for="username">Wpisz swoje imię:</label>
+							<input
+								class="contact__area-style"
+								type="text"
+								id="username"
+								placeholder="Podaj swoje imię"
+							/>
+							<p class="contact__error">Musisz uzupełnić pole</p>
+						</div>
+						<div class="contact__form-box">
+							<label for="email">Wpisz swój adres e-mail</label>
+							<input
+								class="contact__area-style"
+								type="text"
+								id="email"
+								placeholder="Podaj swój e-mail"
+							/>
+							<p class="contact__error ">Musisz uzupełnić pole</p>
+						</div>
+
+						<div class="contact__form-box">
+							<label for="question">Napisz swoją wiaodmość:</label>
+							<textarea
+								id="question"
+								class="contact__form-textarea contact__area-style"
+								placeholder="Tutaj wpisz swoją wiadomość"
+							></textarea>
+							<p class="contact__error">Musisz uzupełnić pole</p>
+						</div>
+
+						<div class="contact__button">
+							<button class="contact__button-send buttons send">Wyślij</button>
+						</div>
+					</div>
+				</div>
+				
+			</form>
+			<div class="popup ">
+				<div class="popup__container ">
+					<div class="popup__title">
+						<h2>Dziękujemy za wiaodmośći!</h2>
+						<p>Odpowiedzi udzielimy jak najszybciej będzie to możliwe :)</p>
+					</div>
+					<button class="popup__button standard__button">Zakmnij</button>
+				</div>
+			</div>
+		</main>
+
+		<!-- @include "_footer.kit" -->
+
+		<script src="dist/js/contact.min.js"></script>
+	</body>
+</html>

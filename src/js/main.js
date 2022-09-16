@@ -12,28 +12,26 @@ const showMenu = () => {
 		});
 	});
 };
+const handleScrollSpy = () => {
+	if (document.body.classList.contains('main-page')) {
+		const sections = [];
+
+		allSections.forEach((section) => {
+			if (window.scrollY <= section.offsetTop + section.offsetHeight - 80) {
+				sections.push(section);
+				console.log(sections);
+				const activeSection = document.querySelector(`${sections[0].id}`);
+				console.log(activeSection);
+			}
+		});
+	}
+};
+
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
 	footerYear.innerText = year;
 };
 
-const addPosition = (id) => {
-	const position = window.scrollY;
-	allSections.forEach((section) => {
-		if (
-			section.classList.contains('about-us') &&
-			section.offsetTop <= position + 80
-		) {
-			console.log(navbarItems);
-		} else if (
-			!section.classList.contains('about-us') &&
-			section.offsetTop <= position + 80
-		) {
-			console.log(`zle`);
-		}
-	});
-};
-
 handleCurrentYear();
 burgerBtn.addEventListener('click', showMenu);
-window.addEventListener('scroll', addPosition);
+window.addEventListener('scroll', handleScrollSpy);

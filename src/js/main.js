@@ -15,18 +15,17 @@ const showMenu = () => {
 const handleScrollSpy = () => {
 	if (document.body.classList.contains('main-page')) {
 		const sections = [];
-		
-		allSections.forEach((section) => {
-			if (window.scrollY <= section.offsetTop + section.offsetHeight - 80) {
-				sections.push(section);
-				
-				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`) 
-				navbarItems.forEach(item => item.classList.remove("position"))
 
-				
-				
-				
-				activeSection.classList.add("position")
+		allSections.forEach((section) => {
+			if (window.scrollY <= section.offsetTop + section.offsetHeight - 81) {
+				sections.push(section);
+
+				const activeSection = document.querySelector(
+					`[href*="${sections[0].id}"]`
+				);
+				navbarItems.forEach((item) => item.classList.remove('position'));
+
+				activeSection.classList.add('position');
 			}
 		});
 	}

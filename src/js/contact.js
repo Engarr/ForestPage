@@ -51,7 +51,6 @@ const sendMsg= ()=>{
 		if(el.classList.contains("show-error")){
 			errors++
 		}
-		console.log(errors);
 	})
 	if(errors === 0){
 		popup.classList.add ("active-popup")
